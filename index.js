@@ -17,7 +17,7 @@ class Driver {
   }
 
   passengers() {
-    return store.passengers.filter(passenger => {
+    return store.passengers.map(passenger => {
       return passenger.driverId === this.id
     })
   }
@@ -46,7 +46,7 @@ class Trip {
     if (passenger) {
       this.passengerId = passenger.id
     }
-    
+
     store.trips.push(this)
   }
 }
