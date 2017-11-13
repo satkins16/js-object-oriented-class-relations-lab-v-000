@@ -9,7 +9,7 @@ class Driver {
 
     store.drivers.push(this)
   }
-  
+
   trips() {
     return store.trips.filter(trip => {
       return trip.driverId === this.id
@@ -21,7 +21,7 @@ class Driver {
       return passenger.driverId === this.id
     })
   }
-  
+
 }
 
 let passengerId = 0
@@ -40,12 +40,9 @@ let tripId = 0
 class Trip {
   constructor(driver, passenger) {
     this.id = ++tripId
-    if(driver) {
-      this.driverID = driver.id
-    }
-    if(passenger) {
-      this.passengerId = passenger.id
-    }
+    this.driverID = driver.id
+    this.passengerId = passenger.id
+  }
 
     store.trips.push(this)
   }
