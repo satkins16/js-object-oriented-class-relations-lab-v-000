@@ -2,7 +2,7 @@ let store = {drivers: [], passengers: [], trips: []}
 
 let driverId = 0
 
-class Drivers {
+class Driver {
   constructor(name) {
     this.id = ++driverId
     this.name = name
